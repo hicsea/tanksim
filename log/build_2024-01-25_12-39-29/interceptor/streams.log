@@ -1,0 +1,24 @@
+[1.847s] Invoking command in '/home/hicsea/Desktop/tanksim_ws/build/interceptor': PYTHONPATH=/home/hicsea/Desktop/tanksim_ws/build/interceptor/prefix_override:/home/hicsea/Desktop/tanksim_ws/install/interceptor/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/hicsea/Desktop/tanksim_ws/build/interceptor/build --no-deps install_data
+[2.142s] running develop
+[2.346s] running egg_info
+[2.346s] creating interceptor.egg-info
+[2.346s] writing interceptor.egg-info/PKG-INFO
+[2.346s] writing dependency_links to interceptor.egg-info/dependency_links.txt
+[2.346s] writing entry points to interceptor.egg-info/entry_points.txt
+[2.346s] writing requirements to interceptor.egg-info/requires.txt
+[2.347s] writing top-level names to interceptor.egg-info/top_level.txt
+[2.348s] writing manifest file 'interceptor.egg-info/SOURCES.txt'
+[2.349s] reading manifest file 'interceptor.egg-info/SOURCES.txt'
+[2.349s] writing manifest file 'interceptor.egg-info/SOURCES.txt'
+[2.389s] running build_ext
+[2.389s] Creating /home/hicsea/Desktop/tanksim_ws/install/interceptor/lib/python3.8/site-packages/interceptor.egg-link (link to .)
+[2.390s] Installing interceptor_node script to /home/hicsea/Desktop/tanksim_ws/install/interceptor/lib/interceptor
+[2.390s] 
+[2.391s] Installed /home/hicsea/Desktop/tanksim_ws/build/interceptor
+[2.391s] running install_data
+[2.391s] creating /home/hicsea/Desktop/tanksim_ws/install/interceptor/share/ament_index
+[2.391s] creating /home/hicsea/Desktop/tanksim_ws/install/interceptor/share/ament_index/resource_index
+[2.391s] creating /home/hicsea/Desktop/tanksim_ws/install/interceptor/share/ament_index/resource_index/packages
+[2.391s] copying resource/interceptor -> /home/hicsea/Desktop/tanksim_ws/install/interceptor/share/ament_index/resource_index/packages
+[2.391s] copying package.xml -> /home/hicsea/Desktop/tanksim_ws/install/interceptor/share/interceptor
+[2.981s] Invoked command in '/home/hicsea/Desktop/tanksim_ws/build/interceptor' returned '0': PYTHONPATH=/home/hicsea/Desktop/tanksim_ws/build/interceptor/prefix_override:/home/hicsea/Desktop/tanksim_ws/install/interceptor/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/hicsea/Desktop/tanksim_ws/build/interceptor/build --no-deps install_data

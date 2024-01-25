@@ -1,0 +1,23 @@
+running develop
+running egg_info
+creating tank_controller.egg-info
+writing tank_controller.egg-info/PKG-INFO
+writing dependency_links to tank_controller.egg-info/dependency_links.txt
+writing entry points to tank_controller.egg-info/entry_points.txt
+writing requirements to tank_controller.egg-info/requires.txt
+writing top-level names to tank_controller.egg-info/top_level.txt
+writing manifest file 'tank_controller.egg-info/SOURCES.txt'
+reading manifest file 'tank_controller.egg-info/SOURCES.txt'
+writing manifest file 'tank_controller.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/hicsea/Desktop/tanksim_ws/install/tank_controller/lib/python3.8/site-packages/tank-controller.egg-link (link to .)
+Installing tank_controller_node script to /home/hicsea/Desktop/tanksim_ws/install/tank_controller/lib/tank_controller
+
+Installed /home/hicsea/Desktop/tanksim_ws/build/tank_controller
+running install_data
+creating /home/hicsea/Desktop/tanksim_ws/install/tank_controller/share/ament_index
+creating /home/hicsea/Desktop/tanksim_ws/install/tank_controller/share/ament_index/resource_index
+creating /home/hicsea/Desktop/tanksim_ws/install/tank_controller/share/ament_index/resource_index/packages
+copying resource/tank_controller -> /home/hicsea/Desktop/tanksim_ws/install/tank_controller/share/ament_index/resource_index/packages
+copying package.xml -> /home/hicsea/Desktop/tanksim_ws/install/tank_controller/share/tank_controller
+creating /home/hicsea/Desktop/tanksim_ws/install/tank_controller/share/tank_controller/srv

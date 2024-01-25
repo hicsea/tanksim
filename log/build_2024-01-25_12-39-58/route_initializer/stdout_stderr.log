@@ -1,0 +1,15 @@
+running develop
+running egg_info
+writing route_initializer.egg-info/PKG-INFO
+writing dependency_links to route_initializer.egg-info/dependency_links.txt
+writing entry points to route_initializer.egg-info/entry_points.txt
+writing requirements to route_initializer.egg-info/requires.txt
+writing top-level names to route_initializer.egg-info/top_level.txt
+reading manifest file 'route_initializer.egg-info/SOURCES.txt'
+writing manifest file 'route_initializer.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/hicsea/Desktop/tanksim_ws/install/route_initializer/lib/python3.8/site-packages/route-initializer.egg-link (link to .)
+Installing route_initializer_node script to /home/hicsea/Desktop/tanksim_ws/install/route_initializer/lib/route_initializer
+
+Installed /home/hicsea/Desktop/tanksim_ws/build/route_initializer
+running install_data

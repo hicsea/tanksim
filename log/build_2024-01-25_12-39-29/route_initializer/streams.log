@@ -1,0 +1,26 @@
+[2.142s] Invoking command in '/home/hicsea/Desktop/tanksim_ws/build/route_initializer': PYTHONPATH=/home/hicsea/Desktop/tanksim_ws/build/route_initializer/prefix_override:/home/hicsea/Desktop/tanksim_ws/install/route_initializer/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/hicsea/Desktop/tanksim_ws/build/route_initializer/build --no-deps install_data
+[2.439s] running develop
+[2.641s] running egg_info
+[2.641s] creating route_initializer.egg-info
+[2.641s] writing route_initializer.egg-info/PKG-INFO
+[2.642s] writing dependency_links to route_initializer.egg-info/dependency_links.txt
+[2.642s] writing entry points to route_initializer.egg-info/entry_points.txt
+[2.642s] writing requirements to route_initializer.egg-info/requires.txt
+[2.642s] writing top-level names to route_initializer.egg-info/top_level.txt
+[2.643s] writing manifest file 'route_initializer.egg-info/SOURCES.txt'
+[2.644s] reading manifest file 'route_initializer.egg-info/SOURCES.txt'
+[2.645s] writing manifest file 'route_initializer.egg-info/SOURCES.txt'
+[2.685s] running build_ext
+[2.686s] Creating /home/hicsea/Desktop/tanksim_ws/install/route_initializer/lib/python3.8/site-packages/route-initializer.egg-link (link to .)
+[2.686s] Installing route_initializer_node script to /home/hicsea/Desktop/tanksim_ws/install/route_initializer/lib/route_initializer
+[2.686s] 
+[2.686s] Installed /home/hicsea/Desktop/tanksim_ws/build/route_initializer
+[2.686s] running install_data
+[2.686s] creating /home/hicsea/Desktop/tanksim_ws/install/route_initializer/share/ament_index
+[2.686s] creating /home/hicsea/Desktop/tanksim_ws/install/route_initializer/share/ament_index/resource_index
+[2.686s] creating /home/hicsea/Desktop/tanksim_ws/install/route_initializer/share/ament_index/resource_index/packages
+[2.686s] copying resource/route_initializer -> /home/hicsea/Desktop/tanksim_ws/install/route_initializer/share/ament_index/resource_index/packages
+[2.686s] copying package.xml -> /home/hicsea/Desktop/tanksim_ws/install/route_initializer/share/route_initializer
+[2.686s] creating /home/hicsea/Desktop/tanksim_ws/install/route_initializer/share/route_initializer/srv
+[2.686s] copying srv/InitializeRoute.srv -> /home/hicsea/Desktop/tanksim_ws/install/route_initializer/share/route_initializer/srv
+[2.712s] Invoked command in '/home/hicsea/Desktop/tanksim_ws/build/route_initializer' returned '0': PYTHONPATH=/home/hicsea/Desktop/tanksim_ws/build/route_initializer/prefix_override:/home/hicsea/Desktop/tanksim_ws/install/route_initializer/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/hicsea/Desktop/tanksim_ws/build/route_initializer/build --no-deps install_data

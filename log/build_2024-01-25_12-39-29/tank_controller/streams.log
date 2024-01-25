@@ -1,0 +1,25 @@
+[1.551s] Invoking command in '/home/hicsea/Desktop/tanksim_ws/build/tank_controller': AMENT_PREFIX_PATH=/home/hicsea/Desktop/tanksim_ws/install/route_initializer:/home/hicsea/Desktop/tanksim_ws/install/tank_controller:/home/hicsea/Desktop/tanksim_ws/install/interceptor:/opt/ros/galactic PYTHONPATH=/home/hicsea/Desktop/tanksim_ws/build/tank_controller/prefix_override:/home/hicsea/Desktop/tanksim_ws/install/tank_controller/lib/python3.8/site-packages:/home/hicsea/Desktop/tanksim_ws/build/route_initializer:/home/hicsea/Desktop/tanksim_ws/install/route_initializer/lib/python3.8/site-packages:/home/hicsea/Desktop/tanksim_ws/build/tank_controller:/home/hicsea/Desktop/tanksim_ws/install/tank_controller/lib/python3.8/site-packages:/home/hicsea/Desktop/tanksim_ws/build/interceptor:/home/hicsea/Desktop/tanksim_ws/install/interceptor/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages:/opt/carla-simulator/PythonAPI:/opt/carla-simulator/PythonAPI/util:/opt/carla-simulator/PythonAPI/carla:/opt/carla-simulator/PythonAPI/carla/agents:/opt/carla-simulator/PythonAPI/carla/dist/carla-0.9.13-py3.7-linux-x86_64.egg /usr/bin/python3 setup.py develop --editable --build-directory /home/hicsea/Desktop/tanksim_ws/build/tank_controller/build --no-deps install_data
+[1.847s] running develop
+[2.052s] running egg_info
+[2.053s] creating tank_controller.egg-info
+[2.053s] writing tank_controller.egg-info/PKG-INFO
+[2.053s] writing dependency_links to tank_controller.egg-info/dependency_links.txt
+[2.053s] writing entry points to tank_controller.egg-info/entry_points.txt
+[2.053s] writing requirements to tank_controller.egg-info/requires.txt
+[2.053s] writing top-level names to tank_controller.egg-info/top_level.txt
+[2.054s] writing manifest file 'tank_controller.egg-info/SOURCES.txt'
+[2.055s] reading manifest file 'tank_controller.egg-info/SOURCES.txt'
+[2.056s] writing manifest file 'tank_controller.egg-info/SOURCES.txt'
+[2.094s] running build_ext
+[2.094s] Creating /home/hicsea/Desktop/tanksim_ws/install/tank_controller/lib/python3.8/site-packages/tank-controller.egg-link (link to .)
+[2.094s] Installing tank_controller_node script to /home/hicsea/Desktop/tanksim_ws/install/tank_controller/lib/tank_controller
+[2.095s] 
+[2.095s] Installed /home/hicsea/Desktop/tanksim_ws/build/tank_controller
+[2.095s] running install_data
+[2.095s] creating /home/hicsea/Desktop/tanksim_ws/install/tank_controller/share/ament_index
+[2.095s] creating /home/hicsea/Desktop/tanksim_ws/install/tank_controller/share/ament_index/resource_index
+[2.095s] creating /home/hicsea/Desktop/tanksim_ws/install/tank_controller/share/ament_index/resource_index/packages
+[2.095s] copying resource/tank_controller -> /home/hicsea/Desktop/tanksim_ws/install/tank_controller/share/ament_index/resource_index/packages
+[2.095s] copying package.xml -> /home/hicsea/Desktop/tanksim_ws/install/tank_controller/share/tank_controller
+[2.095s] creating /home/hicsea/Desktop/tanksim_ws/install/tank_controller/share/tank_controller/srv
+[2.118s] Invoked command in '/home/hicsea/Desktop/tanksim_ws/build/tank_controller' returned '0': AMENT_PREFIX_PATH=/home/hicsea/Desktop/tanksim_ws/install/route_initializer:/home/hicsea/Desktop/tanksim_ws/install/tank_controller:/home/hicsea/Desktop/tanksim_ws/install/interceptor:/opt/ros/galactic PYTHONPATH=/home/hicsea/Desktop/tanksim_ws/build/tank_controller/prefix_override:/home/hicsea/Desktop/tanksim_ws/install/tank_controller/lib/python3.8/site-packages:/home/hicsea/Desktop/tanksim_ws/build/route_initializer:/home/hicsea/Desktop/tanksim_ws/install/route_initializer/lib/python3.8/site-packages:/home/hicsea/Desktop/tanksim_ws/build/tank_controller:/home/hicsea/Desktop/tanksim_ws/install/tank_controller/lib/python3.8/site-packages:/home/hicsea/Desktop/tanksim_ws/build/interceptor:/home/hicsea/Desktop/tanksim_ws/install/interceptor/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages:/opt/carla-simulator/PythonAPI:/opt/carla-simulator/PythonAPI/util:/opt/carla-simulator/PythonAPI/carla:/opt/carla-simulator/PythonAPI/carla/agents:/opt/carla-simulator/PythonAPI/carla/dist/carla-0.9.13-py3.7-linux-x86_64.egg /usr/bin/python3 setup.py develop --editable --build-directory /home/hicsea/Desktop/tanksim_ws/build/tank_controller/build --no-deps install_data

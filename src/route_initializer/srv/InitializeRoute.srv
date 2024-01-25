@@ -1,0 +1,10 @@
+# Service request to initialize the turtle controller
+---
+# Service response containing start, target, and obstacle information
+float64 start_x
+float64 start_y
+float64 start_theta
+float64 target_x
+float64 target_y
+float64 target_theta
+# Add any other fields as needed (e.g., obstacle coordinates, descriptions, etc.)

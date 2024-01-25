@@ -1,0 +1,15 @@
+running develop
+running egg_info
+writing tank_controller.egg-info/PKG-INFO
+writing dependency_links to tank_controller.egg-info/dependency_links.txt
+writing entry points to tank_controller.egg-info/entry_points.txt
+writing requirements to tank_controller.egg-info/requires.txt
+writing top-level names to tank_controller.egg-info/top_level.txt
+reading manifest file 'tank_controller.egg-info/SOURCES.txt'
+writing manifest file 'tank_controller.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/hicsea/Desktop/tanksim_ws/install/tank_controller/lib/python3.8/site-packages/tank-controller.egg-link (link to .)
+Installing tank_controller_node script to /home/hicsea/Desktop/tanksim_ws/install/tank_controller/lib/tank_controller
+
+Installed /home/hicsea/Desktop/tanksim_ws/build/tank_controller
+running install_data
