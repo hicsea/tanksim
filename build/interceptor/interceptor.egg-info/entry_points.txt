@@ -1,0 +1,3 @@
+[console_scripts]
+interceptor_node = interceptor.interceptor_node:main
+

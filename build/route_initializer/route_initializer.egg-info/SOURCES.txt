@@ -1,0 +1,14 @@
+package.xml
+setup.cfg
+setup.py
+resource/route_initializer
+route_initializer/__init__.py
+route_initializer/route_initializer_node.py
+route_initializer.egg-info/PKG-INFO
+route_initializer.egg-info/SOURCES.txt
+route_initializer.egg-info/dependency_links.txt
+route_initializer.egg-info/entry_points.txt
+route_initializer.egg-info/requires.txt
+route_initializer.egg-info/top_level.txt
+route_initializer.egg-info/zip-safe
+srv/InitializeRoute.srv

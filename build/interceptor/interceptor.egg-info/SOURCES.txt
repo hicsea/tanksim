@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+interceptor/__init__.py
+interceptor/interceptor_node.py
+interceptor.egg-info/PKG-INFO
+interceptor.egg-info/SOURCES.txt
+interceptor.egg-info/dependency_links.txt
+interceptor.egg-info/entry_points.txt
+interceptor.egg-info/requires.txt
+interceptor.egg-info/top_level.txt
+interceptor.egg-info/zip-safe
+resource/interceptor

@@ -1,0 +1,3 @@
+[console_scripts]
+route_initializer_node = route_initializer.route_initializer_node:main
+
