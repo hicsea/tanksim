@@ -5,38 +5,18 @@ from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from turtlesim.msg import Pose
 from route_initializer.srv import InitializeRoute
+
 import os
 import signal
-
-class InitializeRouteClientAsync(Node):
-    def __init__(self):
-        super().__init__('route_initializer_client')
-        #Use the initialize route service to get a goal point
-        self.client = self.create_client(InitializeRoute, "get_route")
-        while not self.client.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info("service not available, waiting again...")
-        
-        #we can also add in command line handled coordinates using sys.argv[1] and sys.argv[2]
-        #we could also read in numbers from a file right here
-
-    def send_request(self):
-        request = InitializeRoute.Request()
-        self.future = self.client.call_async(request)
-
+from functools import partial
 
 class Controller_Node(Node):
-    def __init__(self, route):
+    def __init__(self):
         super().__init__('tank_controller_node')
         # self.get_logger().info("Node Started")
-        
-
-
-
-
-        self.goal_x = route.target_x  # Adjust as needed
-        self.goal_y = route.target_y  # Adjust as needed
-
-      
+    
+        self.route = None
+        self.call_initialize_route_service() #initializes the route
 
         # Publisher and Subscriber
         self.my_pose_sub = self.create_subscription(Pose, "/turtle1/pose", self.pose_callback, 10)
@@ -107,7 +87,6 @@ class Controller_Node(Node):
         os.system('killall interceptor_node')
         os.kill(os.getpid(), signal.SIGINT)  # Terminate the current node
 
-
     def my_velocity_cont(self, l_v, a_v):
         self.get_logger().info(f"Commanding linear ={l_v} and angular ={a_v}")
         my_msg = Twist()
@@ -115,28 +94,33 @@ class Controller_Node(Node):
         my_msg.angular.z = a_v
         self.my_interceptor_command.publish(my_msg)
 
+    def call_initialize_route_service(self):
+        client = self.create_client(InitializeRoute, "initialize_route")
+        while not client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().warn("service not available, waiting for service...")
+        
+        #we can also add in command line handled coordinates using sys.argv[1] and sys.argv[2]
+        #we could also read in numbers from a file right here
+        request = InitializeRoute.Request()
+        future = client.call_async(request)
+        future.add_done_callback(partial(self.callback_set_initial_route))
+
+
+
+    def callback_set_initial_route(self, future):
+        try:
+            response = future.result()
+        except Exception as e:
+            self.get_logger().error("Service call failed: %r" % (e,))
+        self.goal_x = response.target_x  # Adjust as needed
+        self.goal_y = response.target_y  # Adjust as needed
+        
+
 def main(args=None):
     rclpy.init(args=args)
-
-    initialize_route_client = InitializeRouteClientAsync()
-    initialize_route_client.send_request()
-
-    route = None
-    while rclpy.ok():
-        rclpy.spin_once(initialize_route_client)
-        if initialize_route_client.future.done():
-            try:
-                route = initialize_route_client.future.result()
-            except Exception as e:
-                initialize_route_client.get_logger().info(
-                    f"Service call failed {e}"
-                )
-            break
-
-        initialize_route_client.destroy_node()
-        
+       
     
-    node = Controller_Node(route)
+    node = Controller_Node()
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()

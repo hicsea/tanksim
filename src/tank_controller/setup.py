@@ -25,6 +25,8 @@ setup(
     entry_points={
         'console_scripts': [
             'tank_controller_node = tank_controller.tank_controller_node:main',
+            'route_initializer_node = tank_controller.route_initializer_node:main',
+        
         ],
     },
 )
