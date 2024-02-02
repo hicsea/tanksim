@@ -1,4 +1,4 @@
-# Service request to initialize the turtle controller
+# Service request to initialize the tank controller
 ---
 # Service response containing start, target, and obstacle information
 float64 start_x

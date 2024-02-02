@@ -35,8 +35,8 @@ Tank::Tank(const std::shared_ptr<rclcpp::Node> nh, const std::string name, const
     ang_vel_ = msg->angular.z;
 });
 
-  pose_pub_ = nh_->create_publisher<tanksim::msg::Pose>("pose", 1);
-  color_pub_ = nh_->create_publisher<tanksim::msg::Color>("color_sensor", 1);
+  pose_pub_ = nh_->create_publisher<tanksim::msg::Pose>("/pose", 1);
+  color_pub_ = nh_->create_publisher<tanksim::msg::Color>("/color_sensor", 1);
   nh_->create_service<tanksim::srv::SetPen>("set_pen", [this](const std::shared_ptr<tanksim::srv::SetPen::Request> req, 
                                                                       std::shared_ptr<tanksim::srv::SetPen::Response> res){
     pen_on_ = !req->off;

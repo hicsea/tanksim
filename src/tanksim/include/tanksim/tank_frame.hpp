@@ -11,6 +11,7 @@
 // This prevents a MOC error with versions of boost >= 1.48
 #ifndef Q_MOC_RUN  // See: https://bugreports.qt-project.org/browse/QTBUG-22829
 # include <rclcpp/rclcpp.hpp>
+#endif
 
 # include <tanksim/srv/empty.hpp>
 # include <tanksim/srv/spawn.hpp>
@@ -18,7 +19,6 @@
 # include <map>
 
 # include "tank.hpp"
-#endif
 
 namespace tanksim
 {

@@ -8,9 +8,9 @@
   <license>TODO: License declaration</license>
 
   <depend>rclpy</depend>
-  <depend>turtlesim</depend>
+  <depend>tanksim</depend>
   <depend>geometry_msgs</depend>
-  <depend>route_initializer</depend>
+  <depend>tank_interfaces</depend>
 
 
 

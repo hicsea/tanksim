@@ -2,7 +2,7 @@
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
-from turtlesim.msg import Pose
+from tanksim.msg import Pose
 
 
 class InterceptorNode(Node):
@@ -12,7 +12,7 @@ class InterceptorNode(Node):
 
     # Publisher and Subscriber
     self.my_pose_sub = self.create_subscription(Twist, "/intercepted_msg", self.pose_callback, 10)
-    self.my_interceptor_command = self.create_publisher(Twist, "/turtle1/cmd_vel", 10)
+    self.my_interceptor_command = self.create_publisher(Twist, "/tank/cmd_vel", 10)
   
   def pose_callback(self, msg: Twist):
     self.get_logger().info(f"Current x vel={msg.linear.x} current y vel={msg.linear.y}")

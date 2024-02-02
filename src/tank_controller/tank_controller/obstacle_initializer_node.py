@@ -1,7 +1,7 @@
 import rclpy
 from rclpy.node import Node
 # from geometry_msgs.msg import Pose
-from obstacle_initializer.srv import InitializeObstacle
+from tank_interfaces.srv import InitializeObstacle
 import random
 from math import pi
 
@@ -14,10 +14,8 @@ class InitializeObstacleService(Node):
 
     def initialize_obstacle_callback(self, request, response: InitializeObstacle):
 
-
-        self.get_logger().info(f'Request received. Returning random pose: start_x={response.start_x}, start_y={response.start_y}, start_theta={response.start_theta}')
-        self.get_logger().info(f'Request received. Returning random pose: target_x={response.target_x}, target_y={response.target_y}, target_theta={response.target_theta}')
-
+        # Create Obstacle in gui here!
+        self.get_logger().info(f'Request received for obstacle with diameter = {request.diameter} at x = {request.x_position} and y = {request.y_position}')
         return response
 
 def main(args=None):

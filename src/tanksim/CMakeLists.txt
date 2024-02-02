@@ -21,7 +21,6 @@ find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(rmw_implementation_cmake REQUIRED)
-# find_package(Qt4 4.6 REQUIRED)
 find_package(Qt5 COMPONENTS Core Widgets REQUIRED)
 
 
@@ -29,12 +28,11 @@ find_package(Qt5 COMPONENTS Core Widgets REQUIRED)
 
 include_directories(include)
 set(tanksim_node_HDRS
-  include/tanksim/tank_frame.hpp
   include/tanksim/tank.hpp
+  include/tanksim/tank_frame.hpp
 )
-# qt4_wrap_cpp(tanksim_node_MOCS ${tanksim_node_HDRS})
+qt5_wrap_cpp(tanksim_node_MOCS ${tanksim_node_HDRS})
 
-# set(CMAKE_AUTOMOC ON)
 
 
 
@@ -57,7 +55,7 @@ add_executable(tanksim_node
   src/tanksim.cpp 
   src/tank_frame.cpp 
   src/tank.cpp
-  # ${tanksim_node_MOCS}
+  ${tanksim_node_MOCS}
 )
 
 get_available_rmw_implementations(rmw_implementations2)
@@ -86,6 +84,10 @@ ament_target_dependencies(tanksim_node
   "geometry_msgs"
 
 )
+
+install(TARGETS
+  tanksim_node
+  DESTINATION lib/${PROJECT_NAME})
 
 
 # add_executable(tank_teleop_key 

@@ -1,6 +1,4 @@
 from setuptools import setup
-import os
-from glob import glob
 
 package_name = 'tank_controller'
 
@@ -12,10 +10,9 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        (os.path.join('share', package_name, 'srv'), glob('srv/*.srv')),
 
     ],
-    install_requires=['setuptools', 'route_initializer'],
+    install_requires=['setuptools'],
     zip_safe=True,
     maintainer='hicsea',
     maintainer_email='hicsea@todo.todo',
@@ -26,7 +23,7 @@ setup(
         'console_scripts': [
             'tank_controller_node = tank_controller.tank_controller_node:main',
             'route_initializer_node = tank_controller.route_initializer_node:main',
-        
+            'obstacle_initializer_node = tank_controller.obstacle_initializer_node:main',    
         ],
     },
 )

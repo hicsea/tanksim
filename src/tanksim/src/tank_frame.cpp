@@ -39,15 +39,28 @@ TankFrame::TankFrame(std::shared_ptr<rclcpp::Node> nh, QWidget* parent, Qt::Wind
   tanks.append("tank.png");
 
 
-  QString images_path = "/home/hicsea/Desktop/tanksim_ws/src/tanksim/images";
+  QString images_path = "";
+
+  char cwd[PATH_MAX];
+  if (getcwd(cwd, sizeof(cwd)) != NULL) {
+    std::string path = std::string(cwd) + "/src/tanksim/images/"; // Correctly append the path
+    images_path = QString::fromStdString(path); // Convert std::string to QString
+  } else {
+    std::cerr << "Error getting current directory" << std::endl;
+  }
+
   for (int i = 0; i < tanks.size(); ++i)
   {
     QImage img;
-    img.load(images_path + tanks[i]);
+    QString image_path = images_path + tanks[i];
+    bool success = img.load(image_path);
     tank_images_.append(img);
   }
 
   meter_ = tank_images_[0].height();
+
+
+
 
   clear();
 
@@ -60,19 +73,9 @@ TankFrame::TankFrame(std::shared_ptr<rclcpp::Node> nh, QWidget* parent, Qt::Wind
 
   width_in_meters_ = (width() - 1) / meter_;
   height_in_meters_ = (height() - 1) / meter_;
-  spawnTank("", width_in_meters_ / 2.0, height_in_meters_ / 2.0, 0);
+  spawnTank("tank", width_in_meters_ / 2.0, height_in_meters_ / 2.0, 0, 0);
 
-  // spawn all available tank types
-  if(false)
-  {
-    for(int index = 0; index < tanks.size(); ++index)
-    {
-      QString name = tanks[index];
-      name = name.split(".").first();
-      name.replace(QString("-"), QString(""));
-      spawnTank(name.toStdString(), 1.0 + 1.5 * (index % 7), 1.0 + 1.5 * (index / 7), PI / 2.0, index);
-    }
-  }
+
 }
 
 
@@ -137,13 +140,14 @@ bool TankFrame::hasTank(const std::string& name)
   return tanks_.find(name) != tanks_.end();
 }
 
-std::string TankFrame::spawnTank(const std::string& name, float x, float y, float angle)
-{
-  return spawnTank(name, x, y, angle, rand() % tank_images_.size());
-}
+// std::string TankFrame::spawnTank(const std::string& name, float x, float y, float angle)
+// {
+//   return spawnTank(name, x, y, angle, rand() % tank_images_.size());
+// }
 
 std::string TankFrame::spawnTank(const std::string& name, float x, float y, float angle, size_t index)
 {
+  std::cout << name << " spawned at (" << x << "," << y << ")" << std::endl;
   std::string real_name = name;
   if (real_name.empty())
   {
@@ -162,10 +166,12 @@ std::string TankFrame::spawnTank(const std::string& name, float x, float y, floa
     }
   }
 
-   TankPtr t(new Tank(nh_, real_name, tank_images_[index], QPointF(x, height_in_meters_ - y), angle));
-   tanks_[real_name] = t;
-   update();
+  TankPtr t(new Tank(nh_, real_name, tank_images_[index], QPointF(x, height_in_meters_ - y), angle));
+  
+  tanks_[real_name] = t;
 
+
+  update();
 //    ROS_INFO("Spawning tank [%s] at x=[%f], y=[%f], theta=[%f]", real_name.c_str(), x, y, angle);
 
   return real_name;

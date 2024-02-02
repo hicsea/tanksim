@@ -2,9 +2,10 @@
 #define TANKSIM_TANK_H
 
 // This prevents a MOC error with versions of boost >= 1.48
-#ifndef Q_MOC_RUN  // See: https://bugreports.qt-project.org/browse/QTBUG-22829
+// #ifndef Q_MOC_RUN  // See: https://bugreports.qt-project.org/browse/QTBUG-22829
 # include <rclcpp/rclcpp.hpp>
 # include <boost/shared_ptr.hpp>
+// #endif
 
 # include <tanksim/msg/pose.hpp>
 # include <geometry_msgs/msg/twist.hpp>
@@ -12,7 +13,6 @@
 # include <tanksim/srv/teleport_relative.hpp>
 # include <tanksim/srv/teleport_absolute.hpp>
 # include <tanksim/msg/color.hpp>
-#endif
 
 #include <QImage>
 #include <QPainter>
